@@ -12,12 +12,17 @@ conn.once("open", () => console.log("Database Coonected..."));
 app.use(
     cors({
         credentials: true,
-        origin: "http://localhost:3000",
+        origin: "*",
     })
 );
+
+app.use('/', (req,res) => {
+    res.send("hello world");
+});
+
 app.use(express.json());
 app.use(UserRoute);
-
+//https://super-caramel-7e7c51.netlify.app/
 app.listen(process.env.APP_PORT, () =>
-    console.log("Server up and running... ")
+    console.log(`Server berjalan pada ${app.server}`)
 );
