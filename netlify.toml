@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/api/users"
-  to = "https://super-caramel-7e7c51.netlify.app/:splat"
+  to = "https://super-caramel-7e7c51.netlify.app/users"
   status = 200
